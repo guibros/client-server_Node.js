@@ -1,0 +1,138 @@
+<!doctype html>
+<!--Guillaume Potvin-Brossard, Hugues Santerre-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Projet 1</title>
+</head>
+
+<body onload="start()">
+    <header class="myheader">
+        <h1 class="titre">Projet 1</h1>
+        <h2 class="soustitre">L'informatique, ca pollue!</h2>
+    </header>
+        <nav>
+            <button class="button" id="Ac">
+                Accueil
+            </button>
+            <button class="button" href="#"id="Fa">
+                Fabrication
+            </button>
+            <button class="button" href="#"id="Ut">
+                Utilisation
+            </button>
+            <button class="button" href="#"id="El">
+                Elimination
+            </button>
+            <button class="button" href="#"id="So">
+                Solution
+            </button>
+        </nav>
+        <div class="mainContainer">
+            <div class="container">
+                <article id="main">
+                    
+                </article>
+                <aside>
+                    <div class="meteo">
+                        <div id="Météo">Météo</div>
+                        <div id="Montréal">Montréal</div>
+                        <div id="date">2020/04/07</div>
+                        <div id="temperature">Temperature: 6.65 C</div>
+                        <img id="imgmeteo" src="img3.png" alt="">
+                    </div>
+                    <div class="search">
+                        <div id="Recherche">Recherche</div>
+                        <div class="rechercherimg">
+                            <input id="input" type="text" placeholder="Rechercher..." name="q">
+                            <img class="logo" src="img2.png" alt="">
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    <footer>
+        COPYRIGHT &copy;  Guillaume Potvin-Brossard, Hugues Santerre . TOUS DROIT RESERVÉS
+    </footer>
+</body>
+
+<script>
+    const mainElRef = document.getElementById("main")
+    const btnAcceuilRef = document.getElementById("Ac")
+    const btnFabricationRef = document.getElementById("Fa")
+    const btnUtilisationRef = document.getElementById("Ut")
+    const btnEliminationnRef = document.getElementById("El")
+    const btnSolutionRef = document.getElementById("So")
+    const colorClicked = "#3a94ba"
+
+    const params = { method: 'GET', // *GET, POST, PUT, DELETE, etc.
+                    mode: 'cors', // no-cors, *cors, same-origin
+                    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                    credentials: 'same-origin', // include, *same-origin, omit
+                    }
+
+    function start(){
+        fetch("http://127.0.0.1:4444", params)
+            .then( data => data.text())
+            .then( data => {
+                console.log(data)
+                mainElRef.innerHTML = data
+            }
+        )
+    }
+    btnAcceuilRef.addEventListener("click", ()=>{
+        fetch("http://127.0.0.1:4444", params)
+            .then( data => data.text())
+            .then( data => {
+                console.log(data)
+                mainElRef.innerHTML = data
+                btnAcceuilRef.style.color = colorClicked
+            })
+        }
+    )
+    btnFabricationRef.addEventListener("click", ()=>{
+        fetch("http://127.0.0.1:4444/Fabrication", params)
+            .then( data => data.text())
+            .then( data => {
+                console.log(data)
+                mainElRef.innerHTML = data
+                btnFabricationRef.style.color = colorClicked
+            })
+        }
+    )
+    btnUtilisationRef.addEventListener("click", ()=>{
+        fetch("http://127.0.0.1:4444/Utilisation", params)
+            .then( data => data.text())
+            .then( data => {
+                console.log(data)
+                mainElRef.innerHTML = data
+                btnUtilisationRef.style.color = colorClicked
+            })
+        }
+    )
+    btnEliminationnRef.addEventListener("click", ()=>{
+        fetch("http://127.0.0.1:4444/Elimination", params)
+            .then( data => data.text())
+            .then( data => {
+                console.log(data)
+                mainElRef.innerHTML = data
+                btnEliminationnRef.style.color = colorClicked
+            })
+        }
+    )
+    btnSolutionRef.addEventListener("click", ()=>{
+        fetch("http://127.0.0.1:4444/Solution", params)
+            .then( data => data.text())
+            .then( data => {
+                console.log(data)
+                mainElRef.innerHTML = data
+                btnSolutionRef.style.color = colorClicked
+            })
+        }
+    )
+</script>
+</html>

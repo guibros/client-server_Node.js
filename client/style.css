@@ -1,0 +1,179 @@
+/* Guillaume Potvin-Brossard, Hugues Santerre */
+body {
+  margin: 0px;
+  background-color: rgb(0, 0, 0);
+  }
+header{
+    width: auto;
+    height: 90px;
+    background-position: center;
+    background-image: url("img.jpg");
+    background-size: 100%, 100%;
+    padding-left: 100px;
+    padding-top: 20px;
+    padding-bottom: 75px;
+  }
+h2{
+color: rgb(196, 1, 1);
+}
+.titre{
+    font-size: 2.3em;
+    color:rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+  }
+.soustitre{
+    font-size: 1em;
+    color:rgba(255, 255, 255, 0.8);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+  }
+nav{
+    display: flex;
+    justify-content: right;
+    padding-right: 6.5em;
+    padding-top: 10px;
+    padding-bottom: 6px;
+  }
+.button{
+    border: none; 
+    background-color: rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 0.8);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0em 0.6em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;    
+    margin: 4px 1em;
+    cursor: pointer;
+  }
+#main{
+    width: 95vw; 
+    font-size: 0.8em;
+    padding: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.6em;
+    color: rgb(97, 97, 97)
+  }
+ul {
+    list-style: none;
+  }
+ul li::before {
+    content: "\2022"; 
+    color: rgb(0, 225, 255); 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 1em; 
+    margin-left: -3em; 
+  }
+.mainContainer{
+    width: auto;
+    height: 500px;
+    padding: 5px;
+    margin-left: 3em;
+    margin-right: 5em;
+    background-color: rgb(255, 255, 255);
+  }
+.container{
+    height: 480px;
+    display: flex;
+    margin: 8px;
+    background-color: rgb(249, 249, 249);
+  }
+img { 
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    max-height: auto;
+  }
+aside{
+    height: 480px;
+    width: 400px;
+    background-color: rgb(230, 230, 230);
+    padding-left:2.5em;
+    box-sizing: border-box;
+  }
+ 
+  .meteo{
+    font-family:Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+  }
+.search{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-top: 30px;
+  }
+#Météo{
+      font-size: 1.6em;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+#Montréal{
+    font-size: 1em;
+    font-weight: 600;
+    color: rgb(196, 1, 1);
+  }
+#date{
+    font-size: 0.7em;
+    font-weight: 600;
+    font-style: italic;
+    color: rgb(78, 78, 78);
+    margin-bottom: 10px;
+  }
+#temperature{
+    font-size: 0.9em;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+  }
+#imgmeteo {
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 30px;
+}
+#Recherche{
+    margin-top: 10px;
+    font-size: 1.6em;
+    font-weight: 600;
+  }
+.rechercheimg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo {
+  width: 16px;
+}
+#input{
+    border: 1px solid #dedede;
+    margin-top: 25px;
+    width: 120px;
+  }
+footer{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 0.6em;
+    font-weight: 400;
+    letter-spacing:0.2em;
+    display: flex;
+    justify-content: center;
+    color: rgb(143, 143, 143);
+    margin-TOP: 20px;
+    margin-bottom: 100px;
+  }
+  @media (max-width: 750px) {
+    .mainContainer {
+      height: 1000px;
+      }
+    .container {
+      height: 980px;
+    }
+    aside{
+      height: 980px;
+    }
+    .button{
+      padding: 0em 0em;
+      margin: 4px 0.4em;
+    }
+    #input{
+      width: 100px;
+    }
+  }
